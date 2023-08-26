@@ -1,27 +1,28 @@
 {
-  "name": "nodejs-cms",
+  "name": "dashboard.calindairy.com",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
+  "author": "Sayyed Jamal Ghasemi",
+  "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "npx tsc && nodemon dist/server.js",
+    "dev": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./dist/server.js\""
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "@grammyjs/files": "^1.0.4",
+    "@grammyjs/menu": "^1.2.1",
+    "@grammyjs/storage-mongodb": "^2.3.0",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "app-module-path": "^2.2.0",
-    "auto-bind": "^4.0.0",
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "express-fileupload": "^1.2.0",
-    "express-session": "^1.17.1",
-    "express-validator": "^6.6.1",
-    "mongoose": "^5.10.13",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "auto-bind": "^5.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "grammy": "^1.17.2",
+    "mongoose": "^7.4.0",
+    "tsc-watch": "^6.0.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "@types/express": "^4.17.17",
+    "typescript": "^5.1.6"
   }
 }
